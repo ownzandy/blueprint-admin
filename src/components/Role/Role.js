@@ -3,16 +3,16 @@ import classes from './Role.scss'
 import RoleDetail from 'routes/Role/containers/RoleDetailContainer'
 import RoleList from 'routes/Role/containers/RoleListContainer'
 import Typeform from 'routes/Role/containers/TypeformContainer'
-import { updateChannel } from 'pusher/updateChannel'
+// import { updateChannel } from 'pusher/updateChannel'
 
 class Role extends React.Component {
 
   constructor () {
     super()
     const that = this
-    updateChannel.bind('trigger_update', function (data) {
-      that.props.fetchRoles(that.props.event['event_type'], that.props.event['year'], that.props.event['season'])
-    })
+    // updateChannel.bind('trigger_update', function (data) {
+    //   that.props.fetchRoles(that.props.event['event_type'], that.props.event['year'], that.props.event['season'])
+    // })
     this.state = {detailDisplay: 'none', typeformDisplay: 'none'}
     this.handlePlusClick = this.handlePlusClick.bind(this)
     this.handleCellClick = this.handleCellClick.bind(this)
