@@ -3,7 +3,7 @@ import classes from './Role.scss'
 import RoleDetail from 'routes/Role/containers/RoleDetailContainer'
 import RoleList from 'routes/Role/containers/RoleListContainer'
 import Typeform from 'routes/Role/containers/TypeformContainer'
-// import { updateChannel } from 'pusher/updateChannel'
+import { updateChannel } from 'pusher/updateChannel'
 
 class Role extends React.Component {
 
