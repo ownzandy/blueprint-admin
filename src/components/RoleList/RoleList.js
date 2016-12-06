@@ -113,9 +113,15 @@ class RoleList extends React.Component {
       searchString += dehumanize(tagFromRole(role))
       if (topLevelTag === 'participant') {
         const attributes = Object.values(role)[0]
-        searchString += attributes['graduation_year'].toString().toLowerCase()
-        searchString += attributes['major'].toLowerCase()
-        searchString += attributes['school'].toLowerCase()
+        if(attributes['graduation_year'] != null) {
+          searchString += attributes['graduation_year'].toString().toLowerCase()
+        }
+        if(attributes['major'] != null) {
+          searchString += attributes['major'].toLowerCase()
+        }
+        if(attributes['school'] != null) {
+          searchString += attributes['school'].toLowerCase()
+        }
         attributes['skills'].forEach(skill => searchString += skill.toLowerCase())
         attributes['custom'].forEach(q => searchString += q.toLowerCase())
       }
